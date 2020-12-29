@@ -20,3 +20,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+#thang dung la thang dau puoi rejack
