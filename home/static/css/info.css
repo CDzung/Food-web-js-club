@@ -1,0 +1,78 @@
+#intro {
+    background-image: url("https://images.unsplash.com/photo-1528164344705-47542687000d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1069&q=80.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    height:70vh;
+    background-position: center
+    
+}
+/* body {
+    display: flex;
+    
+} */
+.heading-main-box {
+    text-align: center;
+    position: absolute;
+    top: 30%;
+    width: 80%;
+}
+img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border-style: solid;
+}
+#intro > .row > .heading-main-box > h2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+h2 {
+    text-align: center;
+    margin: 20px auto;
+    text-transform: uppercase;
+}
+.col-md-6, .col-md-4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+    animation-duration: 1.5s;
+}
+.col-12.japanese {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    font-weight: bold;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+    animation-duration: 1.5s;
+    
+}
+h1 {
+    color: white;
+    margin-top: 50px;
+}
+.container > .row {
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+}
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translate3d(0,100px,0);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+        
+    }
+}
