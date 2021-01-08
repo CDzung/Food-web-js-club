@@ -1,0 +1,47 @@
+
+body {
+   background-color: #FFF0F5;
+   background-image: url("https://unsplash.com/photos/-1GEAA8q3wk.img");
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   margin: 0 auto;
+   padding-top: 56px;
+}
+#mainNavbar {
+   font-size: 1.5rem;
+   font-weight: 150;
+   width: 100%;
+   white-space: nowrap;
+}
+#mainNavbar .navbar-brand {
+   color: #DC143C;
+   text-align: left;
+   font-size: 30px;
+}
+
+#mainNavbar .nav-link {
+   color: white;
+}
+#mainNavbar .nav-link:hover {
+   color: #DC143C;
+   transition-delay: 100ms;
+   transition-property: color;
+}
+/* .container-fluid img {
+   width: 800px;
+   height: 500px;
+} */
+.spacing {
+   margin-bottom: 80px;
+}
+h2 {
+   margin-bottom: 20px;
+   font-weight: bold;
+}
+
+.navbar.scrolled {
+   background: red;
+}
+
+.card {
+   margin-bottom: 10px;
+}
