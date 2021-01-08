@@ -1,7 +1,10 @@
 from django.shortcuts import render
+from django.views import generic
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import login, authenticate
 from django.shortcuts import render, redirect
+from django.urls import reverse_lazy
+from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 
 from home.forms import SignUpForm
 
@@ -27,6 +30,14 @@ def signup(request):
     else:
         form = SignUpForm()
     return render(request, 'signup.html', {'form': form})
-
 def profile(request):
     return render(request, 'profile.html')
+
+class UserEditProfileView(generic.UpdateView):
+    form_class = UserChangeForm
+    template_name = 'profile.html'
+    success_url = reverse_lazy('home')
+
+    def get_object(self):
+        return self.request.user
+
