@@ -5,10 +5,16 @@ Japanese Specialities
 {% endblock title %}
 
 {% block head %}
-<link rel="stylesheet" href="/static/css/style.css">
 {% endblock head %}
 
 {% block body %}
+    <script>
+        function goto_post(id)
+        {
+            location.href = 'post/' + id;
+        }
+    </script>
+
     <section class="container-fluid px-2 mt-5">
         <!-- First dish -->
         <div class="row align-items-center spacing">
@@ -16,32 +22,29 @@ Japanese Specialities
                 <div class="row justify-content-center">
                     <div class="col-10 col-lg-8 blurb mt-5 mb-sm-5">
                         <h2>Sushi</h2>
-                        <p class="lead">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for
-                            those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by
-                            Cicero are also reproduced in their exact original form, accompanied by English versions
-                            from the 1914 translation by H. Rackham.</p>
-                        <button class="btn btn-outline-success" type="button"> Learn More</button>
+                        <p class="lead">Chắc chắn chúng ta cũng đã ít nhất một lần nghe đến tên gọi Sushi vì đây là món ăn
+                            vô cùng nổi tiếng tại Nhật Bản. Thưởng thức Sushi không đơn thuần và việc thưởng thức ẩm thực mà
+                            nó còn là thưởng thức những tác phẩm nghệ thuật.</p>
+                        <button class="btn btn-outline-success" type="button" onclick="goto_post(1)"> Learn More</button>
                     </div>
                 </div>
             </div>
             <div class="col-md-6 align-content-center">
-                <img src="img/sushi.jpg" class="img-fluid" alt="">
+                <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" class="img-fluid" alt="">
             </div>
         </div>
         <!-- Second dish -->
         <div class="row align-items-center spacing">
             <div class="col-md-6 order-2 order-md-1">
-                <img src="img/noodle.jpg" class="img-fluid" alt="">
+                <img src="https://images.foody.vn/res/g88/873488/prof/s576x330/foody-upload-api-foody-mobile-1-jpg-190102151656.jpg" class="img-fluid" alt="">
             </div>
             <div class="col-md-6 text-center order-1 order-md-2">
                 <div class="row justify-content-center">
                     <div class="col-10 mb-5 mb-sm-5">
                         <h2>Udon noodle</h2>
-                        <p class="lead">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for
-                            those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by
-                            Cicero are also reproduced in their exact original form, accompanied by English versions
-                            from the 1914 translation by H. Rackham.</p>
-                        <button class="btn btn-outline-success" type="button"> Learn More</button>
+                        <p class="lead">Dòng Mì! Một trong những món mì mang tính biểu tượng nhất của Nhật Bản: Udon sẽ được
+                            chúng tôi khai thác như thế nào? </p>
+                        <button class="btn btn-outline-success" type="button" onclick="goto_post(2)"> Learn More</button>
                     </div>
                 </div>
             </div>
@@ -52,35 +55,32 @@ Japanese Specialities
                 <div class="row justify-content-center">
                     <div class="col-10 col-lg-8 mb-5 mb-sm-5">
                         <h2>Salmon</h2>
-                        <p class="lead">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for
-                            those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by
-                            Cicero are also reproduced in their exact original form, accompanied by English versions
-                            from the 1914 translation by H. Rackham.</p>
-                        <button class="btn btn-outline-success" type="button"> Learn More</button>
+                        <p class="lead">Một món ăn đặc trưng của Nhật Bản được làm từ cá sống thái lát mỏng. Không gì khác
+                            đó chính là Sashimi. Tại sao nó lại đặc biệt đến vậy?</p>
+                        <button class="btn btn-outline-success" type="button" onclick="goto_post(3)"> Learn More</button>
                     </div>
                 </div>
             </div>
             <div class="col-md-6">
-                <img src="img/salmon.jpg" class="img-fluid" alt="">
+                <img src="https://images.unsplash.com/photo-1546530785-86397501ae20?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=401&q=80" class="img-fluid" alt="">
             </div>
         </div>
         <!-- Fourth dish -->
         <div class="row align-items-center spacing">
             <div class="col-md-6 order-2 order-md-1">
-                <img src="img/rice.jpg" class="img-fluid" alt="">
+                <img src="https://resources.matcha-jp.com/resize/720x2000/2019/03/26-73786.jpeg" class="img-fluid" alt="">
             </div>
             <div class="col-md-6 text-center order-1 order-md-2">
                 <div class="row justify-content-center">
                     <div class="col-10 mb-5 mb-sm-5">
-                        <h2>Udon noodle</h2>
-                        <p class="lead">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for
-                            those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by
-                            Cicero are also reproduced in their exact original form, accompanied by English versions
-                            from the 1914 translation by H. Rackham.</p>
-                        <button class="btn btn-outline-success" type="button"> Learn More</button>
+                        <h2>Ramen noodle</h2>
+                        <p class="lead">Để có một trải nghiệm đáng nhớ với mì ramen - món ăn truyền thống của Nhật Bản,
+                            chúng ta cần những yếu tố gì? </p>
+                        <button class="btn btn-outline-success" type="button" onclick="goto_post(1)"> Learn More</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
 {% endblock body %}
