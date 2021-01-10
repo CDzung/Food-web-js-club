@@ -1,15 +1,27 @@
 {% extends 'base.html' %}
 
-{% block body %}
-   <hr><hr><hr>
-  <h1>Edit Profile</h1>
-  <br/><br/>
 
-  <div class="form-group">
-        <form method = "POST">
-             {% csrf_token %}
-             {{ form.as_p }}
-             <button class="btn btn-secondary">Update
-             Profile</button>
-    </div>
+{% block head %}
+<title>Profile</title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1>Profile</h1>
+    <p>Username: {{ user }}</p>
+    <p>First name: {{ user.first_name }}</p>
+    <p>Last name: {{ user.last_name }}</p>
+    <p>Email: {{ user.email }}</p>
+    <p>Location: {{ user.profile.location }}</p>
+    <p>Birthday: {{ user.profile.birth_date }}</p>
+    <p>Description: {{ user.profile.bio }}</p>
+    <p>Facebook: {{ user.profile.facebook_url }}</p>
+    {% if user.profile.image %}
+    <img src="{{ user.profile.image.url }}" width="240">
+    {% endif %}
+</div>
+    {%if user == user.profile.id %}
+        <a href="{% url 'edit_profile' %}">Edit Profile</a>
+    {%endif%}
+
 {% endblock %}

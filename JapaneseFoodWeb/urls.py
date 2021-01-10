@@ -19,11 +19,15 @@ from home import views
 from django.conf.urls import url, include
 from django.contrib.auth import views as auth_views
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('info/', views.info, name='info'),
     path('', views.home, name='home'),
-    path('profile/', views.UserEditProfileView.as_view(), name = 'profile'),
+    url(r'^profile/$', views.view_profile, name='view_profile'),
+    #path('profile/<str:name>/', views.view_profile, name='view_profile_with_name'),
+    #url(r'^profile/(?P<pk>\d+)/$', views.view_profile, name='view_profile_with_pk'),
+    url(r'^profile/edit/$', views.EditProfileForm.as_view(), name='edit_profile'),
     url(r'^login/$', auth_views.LoginView.as_view(template_name= 'login.html'), name='login'),
     url(r'^logout/$', auth_views.LogoutView.as_view(next_page= 'login'), name='logout'),
     url(r'^signup/$', views.signup, name='signup'),
