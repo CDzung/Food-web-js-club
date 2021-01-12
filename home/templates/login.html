@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block body %}
+<<<<<<< HEAD
 <hr>
 <hr>
 <hr>
@@ -20,6 +21,11 @@
   {% endfor %}
   {% if field.help_text %}
   <p><small style="color: grey">{{ field.help_text }}</small></p>
+=======
+  <h2>Log in to My Site</h2>
+  {% if form.errors %}
+    <p style="color: red">Your username and password didn't match. Please try again.</p>
+>>>>>>> 18382d06ebebe9ab936f9d53af0d6e2c0e824663
   {% endif %}
   </p>
   {% endfor %}
