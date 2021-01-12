@@ -1,0 +1,12 @@
+body {
+    background-color: #FFF0F5;
+}
+.page-wrap {
+    min-height: 100vh;
+}
+
+.sad {
+    width: 450px;
+    height: auto;
+    
+}
